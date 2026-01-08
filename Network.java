@@ -66,6 +66,10 @@ public class Network {
     public boolean addFollowee(String name1, String name2) {
         //// Replace the following statement with your code
         
+        if (name1.equals(name2)) {
+            return false;
+        }
+
         User user1 = getUser(name1);
         User user2 = getUser(name2);
      
@@ -159,11 +163,10 @@ public class Network {
     public String toString() {
        //// Replace the following statement with your code
        
-        String result = "Network:\n";
+        String result = "Network:";
         
-        // Have each user print itself
         for (int i = 0; i < userCount; i++) {
-            result += users[i].toString() + "\n";
+            result += "\n" + users[i].toString() ;
         }
         
         return result;
