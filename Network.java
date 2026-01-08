@@ -65,6 +65,10 @@ public class Network {
      *  or if the "follows" addition failed for some reason, returns false. */
     public boolean addFollowee(String name1, String name2) {
         //// Replace the following statement with your code
+       
+        if (name1 == null || name2 == null) {
+            return false;
+        }
         
         if (name1.equals(name2)) {
             return false;
